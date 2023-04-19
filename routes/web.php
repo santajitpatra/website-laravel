@@ -13,38 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-// Route::get('/demo', function () {
-//     echo "Hello World!";
+// Route::get('/{name?}', function ($name = null) {
+//     $demo = "    <h2>h2 demo</h2>
+//     ";
+//     $data = compact('name', 'demo');
+//     return view('home')->with($data);
 // });
 
-Route::post('/test', function () {
-    echo "Hello World - Test!";
+Route ::get('/', function () {
+    return view('home');
 });
 
-// Route::put('user/{id}', function ($id) {
-
-// });
-
-// Route::patch();
-
-// Route::delete('user/{id}', function ($id) {
-
-// });
-Route::any('/test', function () {
-    echo "Hello World - Test!";
+Route ::get('/about', function () {
+    return view('about');
 });
 
-Route::get('/demo/{name?}/{id?}', function ($name = null, $id = null) {
-    // return view('demo');
-    // echo $name." ";
-    // echo $id;
-    $data = compact('name', 'id');
-    // print_r($data);
-    return view('demo', $data);
-    // return view('demo')->with($data);
-
+Route ::get('/contact', function () {
+    return view('contact');
 });
