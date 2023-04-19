@@ -17,9 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/demo', function () {
-    echo "Hello World!";
-});
+// Route::get('/demo', function () {
+//     echo "Hello World!";
+// });
 
 Route::post('/test', function () {
     echo "Hello World - Test!";
@@ -38,6 +38,13 @@ Route::any('/test', function () {
     echo "Hello World - Test!";
 });
 
-Route::get('/', function () {
-    return view('demo');
+Route::get('/demo/{name?}/{id?}', function ($name = null, $id = null) {
+    // return view('demo');
+    // echo $name." ";
+    // echo $id;
+    $data = compact('name', 'id');
+    // print_r($data);
+    return view('demo', $data);
+    // return view('demo')->with($data);
+
 });

@@ -7,6 +7,9 @@
     <title>Demo</title>
 </head>
 <body>
-    Demo Laravel Framework page !
+ <h1>Demo Laravel Framework page !</h1>
+ <h2>{{$name}}</h2>
+ <h2>{{$id}}</h2>
+
 </body>
 </html>
