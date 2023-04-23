@@ -11,7 +11,7 @@ class PhotoController extends Controller
      */
     public function index()
     {
-        //
+        echo "index";
     }
 
     /**
@@ -19,7 +19,7 @@ class PhotoController extends Controller
      */
     public function create()
     {
-        //
+        echo "Create";
     }
 
     /**
@@ -35,7 +35,7 @@ class PhotoController extends Controller
      */
     public function show(string $id)
     {
-        //
+        echo $id;
     }
 
     /**
